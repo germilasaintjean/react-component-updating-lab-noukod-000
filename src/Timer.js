@@ -14,12 +14,12 @@ class Timer extends Component {
 
 
   //Your code here
-// componentDidUpdate () {
-//
-// }
 
 shouldComponentUpdate(nextProps, nextState) {
-  return (this.props.myImportantValue !== nextProps.myImportantValue);
+  return (this.state === nextState.time){
+    return false
+  }
+  return true
 }
 
   componentDidMount() {
